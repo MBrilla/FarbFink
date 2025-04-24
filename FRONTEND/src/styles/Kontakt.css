@@ -1,0 +1,183 @@
+.kontakt-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.kontakt-hero {
+  height: 40vh;
+  background: linear-gradient(135deg, rgba(0, 200, 187, 0.9), rgba(58, 124, 120, 0.9));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.kontakt-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.kontakt-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.kontakt-content {
+  max-width: 1200px;
+  margin: -50px auto 0;
+  padding: 0 2rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.kontakt-info {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-item h3 {
+  font-size: 1.2rem;
+  color: #00C8BB;
+  margin-bottom: 1rem;
+}
+
+.contact-item p {
+  margin-bottom: 0.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00C8BB;
+}
+
+.form-group button {
+  background: linear-gradient(135deg, #00C8BB 0%, #3A7C78 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.form-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.success-message h2 {
+  color: #00C8BB;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .kontakt-hero {
+    height: 30vh;
+  }
+
+  .kontakt-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .kontakt-content {
+    padding: 0 1rem 3rem;
+  }
+
+  .kontakt-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    min-height: 200px;
+  }
+} 
