@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000; /* Ensure navbar is on top */
   padding: 1rem 0;
 }
 
@@ -43,12 +43,12 @@
 }
 
 .logo-img {
-  height: 100px;
+  height: 130px;
   width: auto;
 }
 
 .logo-text {
-  height: 102px;
+  height: 150px;
   width: auto;
   margin-left: 12px;
 }
@@ -62,13 +62,13 @@
 .nav-link {
   color: var(--cyan-black);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
   text-transform: uppercase;
   padding: 0.5rem 0;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat-alt1', Arial, sans-serif;
 }
 
 .nav-link:hover {
@@ -87,6 +87,28 @@
   height: 2px;
   background-color: var(--cyan-black);
   transition: all 0.3s ease;
+}
+
+.navbar-paintdrip {
+  position: absolute;
+  left: -30px;
+  bottom: -180px;
+  width: 300px;
+  height: auto;
+  z-index: 500; /* Lower z-index than navbar */
+  pointer-events: none;
+
+}
+
+.navbar-paintsplatter {
+  position: absolute;
+  top: -200px;
+  right: -304px;
+  width: 650px;
+  height: auto;
+  z-index: 400; /* Lower z-index than navbar */
+  pointer-events: none;
+
 }
 
 @media (max-width: 768px) {
@@ -125,4 +147,16 @@
   .navbar-toggle {
     display: flex;
   }
-} 
+
+  .navbar-paintdrip {
+    width: 60px;
+    bottom: -8px;
+  }
+  .navbar-paintsplatter {
+    width: 38px;
+    top: -10px;
+    right: 10px;
+  }
+}
+
+/* Custom Scrollbar */

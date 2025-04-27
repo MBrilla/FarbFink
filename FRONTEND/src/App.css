@@ -73,7 +73,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   background-color: var(--offwhite);
   color: var(--cyan-black);
 }
@@ -104,7 +104,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/girlblueorangebwportrait.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,12 +119,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(252, 187, 0, 0.7) 0%,
-    rgba(0, 200, 187, 0.7) 50%,
-    rgba(58, 124, 120, 0.7) 100%
-  );
+  background: none;
   z-index: 1;
 }
 
@@ -144,7 +138,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 600;
   margin-bottom: 2rem;
@@ -159,7 +153,7 @@ body {
 }
 
 .hero h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 400;
   color: white;
@@ -175,7 +169,7 @@ body {
 }
 
 .hero p {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.6;
   max-width: 700px;
@@ -212,7 +206,7 @@ body {
 }
 
 .word-animation span {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 600;
   color: white;
@@ -268,4 +262,20 @@ main {
 
 footer {
   flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--offwhite); /* Background of the scrollbar track */
+  z-index: auto; /* Ensure the scrollbar track is on top */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cyan-black); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 3px solid var(--offwhite); /* Adds a border around the thumb */
+  z-index: auto; /* Ensure the scrollbar thumb is on top */
 }

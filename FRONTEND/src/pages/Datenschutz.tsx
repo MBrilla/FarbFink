@@ -10,7 +10,7 @@ const Datenschutz: React.FC = () => {
         <div className="legal-section">
           <h2>Verantwortlich im Sinne der Datenschutzgesetze</h2>
           <p>Insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
-          <p>Umut Yildirim – Farbfink</p>
+          <p>Umut Yilgenci – Farbfink</p>
           <p>Kampstraße 1</p>
           <p>48336 Sassenberg</p>
         </div>

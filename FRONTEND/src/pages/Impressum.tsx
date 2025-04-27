@@ -1,9 +1,7 @@
 import React from 'react';
 import '../styles/Legal.css';
-import { useScrollToTop } from '../hooks/useScrollToTop';
 
 const Impressum: React.FC = () => {
-  useScrollToTop();
   return (
     <div className="legal-page">
       <div className="legal-content">
@@ -11,8 +9,8 @@ const Impressum: React.FC = () => {
         <h2>Angaben gemäß § 5 TMG</h2>
         
         <div className="legal-section">
-          <p>Umut Yildirim</p>
-          <p>Farbfink – Art & Design</p>
+          <p>Umut Yilgenci</p>
+          <p>Farbfink Fassadengestaltung</p>
           <p>Kampstraße 1</p>
           <p>48336 Sassenberg</p>
         </div>

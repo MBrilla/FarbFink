@@ -37,12 +37,14 @@
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .projects-hero p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .projects-grid {
@@ -85,12 +87,14 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #1a1a1a;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .project-content p {
   color: #666666;
   line-height: 1.5;
   margin-bottom: 1rem;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .project-tags {
@@ -106,6 +110,7 @@
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.875rem;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .project-link {
@@ -114,6 +119,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 .project-link:hover {

@@ -1,95 +1,120 @@
 /* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
+.homepage-container {
   width: 100%;
-  background-image: url('/girlblueorangebwportrait.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+
+.hero {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Hide parts of images that might overflow */
+  /* Removed background-image and background-attachment */
 }
 
-.hero::after {
-  content: '';
+/* Style for the slider container */
+.slider-container {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(252, 187, 0, 0.7) 0%,
-    rgba(0, 200, 187, 0.7) 50%,
-    rgba(58, 124, 120, 0.7) 100%
-  );
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Above overlay */
 }
 
+/* Style for individual slide images */
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area, cropping if needed */
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Fade transition */
+}
+
+.slide-image.active {
+  opacity: 1; /* Make the active slide visible */
+}
+
+/* Gradient overlay 
+.hero-overlay { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('/gradientfarbfinkpng.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /*
+  z-index: 0; /* Now the bottom layer 
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  
+}
+*/
+/* Keep hero content on top */
 .hero-content {
   position: relative;
-  z-index: 2;
-  padding: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
+  z-index: 2; /* Above slider and overlay */
+  max-width: 800px; /* Adjust as needed */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .animated-text-container {
-  margin-bottom: 4rem;
+  height: 80px; /* Adjust based on font size */
+  overflow: hidden;
+  margin-bottom: 20px; /* Space below animation */
 }
 
-.word-animation {
-  position: relative;
-  height: 120px;
+/* Pop-in row animation for hero words */
+.word-pop-row {
   display: flex;
+  gap: 1.2rem;
   justify-content: center;
   align-items: center;
 }
 
-.word-animation span {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 600;
-  color: white;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  position: absolute;
+.pop-word {
   opacity: 0;
-  animation: rotateWords 9s linear infinite 0s;
+  transform: scale(0.8);
+  transition: opacity 0.18s cubic-bezier(0.4,0,0.2,1), transform 0.18s cubic-bezier(0.4,0,0.2,1);
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.18);
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
-.word-animation span:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.word-animation span:nth-child(3) {
-  animation-delay: 6s;
+.pop-word.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 400;
-  color: white;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1s ease-out 0.5s forwards;
-  opacity: 0;
-  max-width: 90%;
-  margin: 0 auto;
-  line-height: 1.4;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  font-weight: 300;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 /* Intro Section */
 .intro-section {
   width: 100%;
-  background-color: white;
+  background-color: var(--offwhite);
   position: relative;
   display: flex;
   align-items: center;
@@ -105,7 +130,7 @@
 }
 
 .intro-content h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 600;
   color: #1a1a1a;
@@ -115,7 +140,7 @@
 }
 
 .intro-content h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 400;
   color: #333333;
@@ -126,27 +151,35 @@
   margin-right: auto;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(
-    135deg,
-    #00C8BB 0%,
-    #3A7C78 100%
-  );
-  border-radius: 4px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.projekte-image-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.projekte-image-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--offwhite);
+  border-radius: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.projekte-image-button:hover img {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,200,187,0.13);
 }
 
 @keyframes rotateWords {
@@ -181,4 +214,57 @@
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+  .hero {
+    /* Adjust height for smaller screens if needed */
+     height: 80vh; 
+  }
+
+  .pop-word {
+    font-size: 3.5rem;
+  }
+  .animated-text-container {
+    height: 60px;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2rem;
+  }
+
+  .intro-content h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pop-word {
+    font-size: 2.5rem;
+  }
+  .animated-text-container {
+    height: 45px;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .intro-section {
+    padding: 60px 15px;
+  }
+
+  .intro-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-content h2 {
+    font-size: 0.9rem;
+  }
+}

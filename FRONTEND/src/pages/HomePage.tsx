@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/HomePage.css';
+import ImageSlider from '../components/ImageSlider';
+
+const images = [
+  '/Slider/girlGRAD.png',
+  '/Slider/QiubiteGRAD.png',
+  '/Slider/flowerGRAD.png',
+  '/Slider/gokuGRAD.png',
+  '/Slider/cranegirlrGRAD.png'
+];
 
 const HomePage: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [visibleWords, setVisibleWords] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  useEffect(() => {
+    // Reveal each word in sequence, then stop
+    if (visibleWords < 3) {
+      const wordTimeout = setTimeout(() => {
+        setVisibleWords((prev) => prev + 1);
+      }, 350); // Quick reveal, adjust as needed
+      return () => clearTimeout(wordTimeout);
+    }
+  }, [visibleWords]);
+
   return (
-    <>
+    <div className="homepage-container">
       <section className="hero">
-        <div className="hero-content">
+        <div className="slider-container">
+          <ImageSlider images={images} interval={5000} />
+        </div>
+        <div className="hero-overlay"></div> {/* Renamed gradient overlay */}
+        <div className="hero-content">      {/* Text content */}
           <div className="animated-text-container">
-            <div className="word-animation">
-              <span>Kunst.</span>
-              <span>Konzept.</span>
-              <span>Kontrast.</span>
+            <div className="word-pop-row">
+              <span className={`pop-word${visibleWords > 0 ? ' visible' : ''}`}>Kunst.</span>
+              <span className={`pop-word${visibleWords > 1 ? ' visible' : ''}`}>Konzept.</span>
+              <span className={`pop-word${visibleWords > 2 ? ' visible' : ''}`}>Kontrast.</span>
             </div>
           </div>
           <h2>Individuelle Gestaltung für Raum & Objekt.</h2>
@@ -21,21 +55,18 @@ const HomePage: React.FC = () => {
       <section className="intro-section">
         <div className="intro-content">
           <h1>
-            WIR SIND FARBFINK.<br />
-            DIE GRAFFITI AGENTUR<br />
-            MIT DEM BLICK FÜRS DETAIL.
+          PLANEN. ENTWERFEN. SPRÜHEN. STAUNEN.
           </h1>
           <h2>
-            Unsere Graffitikünstler realisieren kreative Ideen, großflächige Wandbemalungen
-            und Graffitiaufträge. Hereinspaziert in unsere Welt der Formen & Farben!
+          Wir begleiten jedes Projekt von der Idee bis zum fertigen Werk. Mit Leidenschaft für Kunst, Handwerk und Stil.
           </h2>
-          <Link to="/projekte" className="cta-button">
-            Projekte entdecken
+          <Link to="/projekte" className="projekte-image-button">
+            <img src="public\output-onlinepngtools (1).png" alt="Projekte" style={{ width: '320px', maxWidth: '90%', background: 'var(--offwhite)', borderRadius: '32px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }} />
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
-export default HomePage; 
+export default HomePage;

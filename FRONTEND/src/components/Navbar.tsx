@@ -7,10 +7,12 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
+      <img src="/paintdrip.png" alt="Paint Drip" className="navbar-paintdrip" />
+      <img src="/paintsplatter.png" alt="Paint Splatter" className="navbar-paintsplatter" />
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">
-            <img src="/farbfink logo.svg" alt="Farbfink Logo" className="logo-img" />
+            <img src="/Farbfinklogo.svg" alt="Farbfink Logo" className="logo-img" />
             <img src="/farbfinktext.png" alt="Farbfink Text" className="logo-text" />
           </Link>
         </div>

@@ -9,7 +9,7 @@ const AGB: React.FC = () => {
         
         <div className="legal-section">
           <h2>1. Geltungsbereich</h2>
-          <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle gegenwärtigen und zukünftigen Geschäftsbeziehungen zwischen Farbfink – Art & Design (nachfolgend "Farbfink") und dem Auftraggeber.</p>
+          <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle gegenwärtigen und zukünftigen Geschäftsbeziehungen zwischen Farbfink – Fassadengestaltung (nachfolgend "Farbfink") und dem Auftraggeber.</p>
         </div>
 
         <div className="legal-section">
