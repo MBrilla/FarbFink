@@ -12,16 +12,7 @@ const images = [
 ];
 
 const HomePage: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleWords, setVisibleWords] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
 
   useEffect(() => {
     // Reveal each word in sequence, then stop

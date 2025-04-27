@@ -10,7 +10,7 @@ import Impressum from './pages/Impressum.tsx'
 import Datenschutz from './pages/Datenschutz.tsx'
 import AGB from './pages/AGB.tsx'
 import LeistungenPage from './pages/LeistungenPage'
-import AboutUsPage from './pages/AboutUsPage'
+import AboutUsPage from './pages/AboutUsPage.tsx'
 import './App.css'
 
 const App: React.FC = () => {
