@@ -4,16 +4,17 @@
 }
 
 .hero {
-  height: 100vh; /* Full viewport height */
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  min-height: 320px;
+  max-height: 100svh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
-  overflow: hidden; /* Hide parts of images that might overflow */
-  /* Removed background-image and background-attachment */
+  overflow: hidden;
 }
 
 /* Style for the slider container */
@@ -21,9 +22,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Above overlay */
+  width: 100vw;
+  height: 100vh;
+  min-height: 320px;
+  max-height: 100svh;
 }
 
 /* Style for individual slide images */
@@ -31,72 +33,69 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the area, cropping if needed */
+  width: 100vw;
+  height: 100vh;
+  min-height: 320px;
+  max-height: 100svh;
+  object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* Fade transition */
+  transition: opacity 1s ease-in-out;
+  mix-blend-mode: normal !important;
 }
 
 .slide-image.active {
   opacity: 1; /* Make the active slide visible */
 }
 
-/* Gradient overlay 
-.hero-overlay { 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url('/gradientfarbfinkpng.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  /*
-  z-index: 0; /* Now the bottom layer 
-  mix-blend-mode: multiply;
-  opacity: 0.7;
-  
-}
-*/
 /* Keep hero content on top */
 .hero-content {
   position: relative;
   z-index: 2; /* Above slider and overlay */
-  max-width: 800px; /* Adjust as needed */
-  padding: 20px;
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
 
 .animated-text-container {
-  height: 80px; /* Adjust based on font size */
-  overflow: hidden;
-  margin-bottom: 20px; /* Space below animation */
+  height: clamp(40px, 10vw, 120px);
+  margin-bottom: clamp(1rem, 4vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Pop-in row animation for hero words */
 .word-pop-row {
   display: flex;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1.2rem);
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow-wrap: anywhere;
 }
 
 .pop-word {
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.18s cubic-bezier(0.4,0,0.2,1), transform 0.18s cubic-bezier(0.4,0,0.2,1);
-  font-size: 5rem;
+  font-size: clamp(1.2rem, 8vw, 5rem);
   font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.18);
   font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
+  word-break: break-word;
+  max-width: 100vw;
+  text-align: center;
 }
 
 .pop-word.visible {
@@ -105,21 +104,22 @@
 }
 
 .hero h2 {
-  font-size: 1.8rem;
-  margin-top: 10px;
+  font-size: clamp(1.1rem, 3vw, 2.2rem);
+  margin-top: clamp(1rem, 3vw, 2rem);
+  padding-top: clamp(0.5rem, 2vw, 1rem);
   font-weight: 300;
   font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
 }
 
 /* Intro Section */
 .intro-section {
-  width: 100%;
+  width: 100vw;
   background-color: var(--offwhite);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2rem;
+  padding: clamp(2rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
 }
 
 .intro-content {
@@ -130,25 +130,23 @@
 }
 
 .intro-content h1 {
+  font-size: clamp(1.2rem, 6vw, 3.5rem);
+  margin-bottom: clamp(1rem, 4vw, 2rem);
   font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 600;
   color: #1a1a1a;
   line-height: 1.3;
-  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
 .intro-content h2 {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  margin-bottom: clamp(1rem, 4vw, 3rem);
+  max-width: 90vw;
   font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 400;
   color: #333333;
   line-height: 1.6;
-  margin-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .projekte-image-button {
@@ -156,7 +154,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 90vw;
   margin: 0 auto;
   background: none;
   border: none;
@@ -167,10 +165,10 @@
 
 .projekte-image-button img {
   display: block;
-  width: 100%;
+  width: clamp(120px, 40vw, 320px);
   height: auto;
   background: var(--offwhite);
-  border-radius: 32px;
+  border-radius: clamp(12px, 4vw, 32px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1);
   pointer-events: auto;
@@ -179,7 +177,7 @@
 
 .projekte-image-button:hover img {
   transform: scale(1.04) translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,200,187,0.13);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
 @keyframes rotateWords {
@@ -266,5 +264,16 @@
 
   .intro-content h2 {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .word-pop-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .pop-word {
+    font-size: clamp(1.1rem, 10vw, 2.5rem);
+    max-width: 98vw;
   }
 }

@@ -30,7 +30,6 @@ const HomePage: React.FC = () => {
         <div className="slider-container">
           <ImageSlider images={images} interval={5000} />
         </div>
-        <div className="hero-overlay"></div> {/* Renamed gradient overlay */}
         <div className="hero-content">      {/* Text content */}
           <div className="animated-text-container">
             <div className="word-pop-row">
@@ -52,7 +51,7 @@ const HomePage: React.FC = () => {
           Wir begleiten jedes Projekt von der Idee bis zum fertigen Werk. Mit Leidenschaft für Kunst, Handwerk und Stil.
           </h2>
           <Link to="/projekte" className="projekte-image-button">
-            <img src="public\output-onlinepngtools (1).png" alt="Projekte" style={{ width: '320px', maxWidth: '90%', background: 'var(--offwhite)', borderRadius: '32px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }} />
+            <img src="\public\output-onlinepngtools (1).png" alt="Projekte" style={{ width: '320px', maxWidth: '90%', background: 'var(--offwhite)', borderRadius: '32px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }} />
           </Link>
         </div>
       </section>

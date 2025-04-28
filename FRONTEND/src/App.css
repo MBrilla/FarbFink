@@ -119,7 +119,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: none;
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -266,14 +266,17 @@ footer {
 
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
+  z-index: 9998;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--offwhite); /* Background of the scrollbar track */
   z-index: auto; /* Ensure the scrollbar track is on top */
+  z-index: 9998;
 }
 
 ::-webkit-scrollbar-thumb {
+  z-index: 9998;
   background-color: var(--cyan-black); /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners for the scrollbar thumb */
   border: 3px solid var(--offwhite); /* Adds a border around the thumb */

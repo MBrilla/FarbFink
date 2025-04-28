@@ -25,17 +25,3 @@
   z-index: 1;
 }
 
-.gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(252, 187, 0, 0.7) 0%,
-    rgba(0, 200, 187, 0.7) 50%,
-    rgba(58, 124, 120, 0.7) 100%
-  );
-  z-index: 2;
-}

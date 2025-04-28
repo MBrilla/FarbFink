@@ -30,7 +30,7 @@ const Kontakt: React.FC = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <h3>Adresse</h3>
-                <p>Farbfink – Art & Design</p>
+                <p>Farbfink – Fassadengestaltung</p>
                 <p>Kampstraße 1</p>
                 <p>48336 Sassenberg</p>
               </div>
