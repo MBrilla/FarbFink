@@ -90,6 +90,7 @@
   z-index: 2;
   width: 50%;
   padding: 4rem;
+  margin-left: 50%;
 }
 
 .mission-content h2 {
@@ -105,7 +106,7 @@
 
 .mission-img {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 50%;
   height: 100%;
@@ -291,4 +292,4 @@
   .aboutus-highlight h3 {
     font-size: 1rem;
   }
-}       
+}

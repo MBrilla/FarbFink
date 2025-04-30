@@ -76,6 +76,10 @@ body {
   font-family: 'Montserrat Alternates', 'Montserrat', 'montserrat-alt1', Arial, sans-serif;
   background-color: var(--offwhite);
   color: var(--cyan-black);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-content {
@@ -281,4 +285,120 @@ footer {
   border-radius: 10px; /* Rounded corners for the scrollbar thumb */
   border: 3px solid var(--offwhite); /* Adds a border around the thumb */
   z-index: auto; /* Ensure the scrollbar thumb is on top */
+}
+
+/* Global image protection */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+}
+
+/* Global content protection */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection for specific content */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-description,
+.contact-info,
+.legal-content,
+.process-step p,
+.service-content p {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Re-enable pointer events for interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+.navbar-toggle,
+.category-button,
+.cta-button img,
+.contact-button,
+.form-group button {
+  pointer-events: auto !important;
+}
+
+/* Prevent context menu on images */
+img:not([class*="logo"]) {
+  pointer-events: none;
+}
+
+/* Allow pointer events for logo images */
+.logo-img,
+.navbar-logo img {
+  pointer-events: auto;
+}
+
+/* Maintain clickable areas */
+.navbar-menu,
+.footer-section a,
+.social-links a {
+  pointer-events: auto;
+}
+
+/* Form elements should remain selectable */
+input,
+textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Prevent image dragging in specific components that need interaction */
+.navbar-toggle img,
+.social-icon img {
+  pointer-events: none;
+}
+
+/* Ensure links within protected content work */
+a {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: auto;
+}
+
+/* Allow selection in code blocks or pre elements */
+pre,
+code {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }

@@ -1,60 +1,49 @@
 .kontakt-page {
+  border-top:2rem;
   min-height: 100vh;
-  background-color: #ffffff;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
-}
-
-.kontakt-hero {
-  height: 40vh;
-  background-color: var(--cyan);
-  opacity: 0.9;
+  height: 100vh;
+  background: var(--offwhite);
+  font-family: 'Montserrat-Alt1', Arial, sans-serif !important;
+  font-weight: 900 !important;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 2rem;
-  color: white;
-}
-
-.kontakt-hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: 'montserrat-alt1', Arial, sans-serif;
-}
-
-.kontakt-hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
-}
-
-.kontakt-content {
-  max-width: 1200px;
-  margin: -50px auto 0;
-  padding: 0 2rem 4rem;
-  position: relative;
-  z-index: 2;
-}
-
-.kontakt-info {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  margin-bottom: 3rem;
+}
+
+.kontakt-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 4rem;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
 }
 
-.info-section h2 {
-  font-size: 2rem;
-  color: #333;
+/* Left Side */
+.kontakt-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kontakt-left h1 {
+  margin-top: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 2rem;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+  color: var(--cyan-black);
+}
+
+.kontakt-left .highlight {
+  color: var(--accent);
+  display: block;
+}
+
+/* Contact Info */
+.contact-info {
+  background: var(--offwhite);
+  border-radius: 8px;
 }
 
 .contact-details {
@@ -63,92 +52,90 @@
 }
 
 .contact-item h3 {
-  font-size: 1.2rem;
-  color: #00C8BB;
-  margin-bottom: 1rem;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
 .contact-item p {
   margin-bottom: 0.5rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+  color: var(--cyan-black);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-.contact-image {
+/* Right Side */
+.kontakt-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Contact Form */
+.contact-form {
   width: 100%;
-  height: 100%;
-  min-height: 300px;
-  overflow: hidden;
+  background: var(--offwhite);
   border-radius: 8px;
 }
 
-.contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.contact-form {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-}
-
 .contact-form h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
-}
-
-.form-group {
+  font-size: 1.5rem;
+  color: var(--cyan-black);
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 500;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+.form-group {
+  margin-bottom: 1rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid var(--accent);
   border-radius: 4px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--cyan-black);
+  font-family: 'Montserrat-Alt1', Arial, sans-serif;
+  font-weight: 900;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--cyan-black);
+  opacity: 0.7;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00C8BB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 100px;
 }
 
 .form-group button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
   background-color: var(--cyan);
-  color: white;
-  padding: 1rem 2rem;
+  color: var(--cyan-black);
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-family: 'Montserrat-Alt1', Arial, sans-serif;
+  font-weight: 900;
 }
 
 .form-group button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-dark);
 }
 
 .form-group button:disabled {
@@ -156,40 +143,55 @@
   cursor: not-allowed;
 }
 
+/* Success Message */
 .success-message {
   text-align: center;
-  padding: 4rem 2rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .success-message h2 {
-  color: #00C8BB;
+  font-size: 2rem;
+  color: var(--accent);
   margin-bottom: 1rem;
-  font-family: 'montserrat-alt1', Arial, sans-serif;
+}
+
+.success-message p {
+  font-size: 1.2rem;
+  color: var(--cyan-black);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .kontakt-container {
+    gap: 2rem;
+    max-height: none;
+  }
 }
 
 @media (max-width: 768px) {
-  .kontakt-hero {
-    height: 30vh;
+  .kontakt-page {
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
   }
 
-  .kontakt-hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .kontakt-content {
-    padding: 0 1rem 3rem;
-  }
-
-  .kontakt-info {
+  .kontakt-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .contact-image {
-    min-height: 200px;
+  .kontakt-left h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details {
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
   }
 }
