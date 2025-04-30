@@ -39,10 +39,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 5000 }) =>
       {images.map((image, index) => (
         <div
           key={image}
-          className={`slider-image ${index === currentImageIndex ? 'active' : ''}`}style={{ backgroundImage: `url(${image})` }}
+          className={`slider-image ${index === currentImageIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${image})` }}
         />
       ))}
-      <div className="gradient-overlay" />
     </div>
   );
 };
