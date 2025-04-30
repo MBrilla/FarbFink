@@ -42,7 +42,7 @@ const LeistungenPage: React.FC = () => {
         {/* Full width image 1 */}
         <div className="service-item">
           <div className="service-full-image">
-            <img src="/Leistungen/tigerGRAD.png" alt="Fassaden Vollbild" />
+            <img src="./Leistungen/tigerGRAD.png" alt="Fassaden Vollbild" />
           </div>
         </div>
 
@@ -50,14 +50,14 @@ const LeistungenPage: React.FC = () => {
         <div className="service-item">
           <div className="service-split">
             <div className="service-icon">
-              <img src="/auschenwande.png" alt="Fassaden Icon" />
+              <img src="./auschenwande.png" alt="Fassaden Icon" />
             </div>
             <div className="service-content">
               <h2>FASSADEN</h2>
               <p>Mit unserer Hilfe könnte Ihre Fassade zu einem farbenfrohen Blickfang werden! Ob zu Verschönerungs- oder Werbezwecken – eine großflächige künstlerische Fassadengestaltung besitzt für den Betrachter einen hohen Wiedererkennungswert.</p>
               <div className="cta-button-wrapper">
                 <Link to="/projekte" className="cta-button">
-                  <img src="/projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
+                  <img src="./projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
                 </Link>
               </div>
             </div>
@@ -67,7 +67,7 @@ const LeistungenPage: React.FC = () => {
         {/* Full width image 2 */}
         <div className="service-item">
           <div className="service-full-image">
-            <img src="/Leistungen/minions2GRAD.png" alt="Innenräume Vollbild" />
+            <img src="./Leistungen/minions2GRAD.png" alt="Innenräume Vollbild" />
           </div>
         </div>
 
@@ -75,14 +75,14 @@ const LeistungenPage: React.FC = () => {
         <div className="service-item">
           <div className="service-split">
             <div className="service-icon">
-              <img src="/innen.png" alt="Innenräume Icon" />
+              <img src="./innen.png" alt="Innenräume Icon" />
             </div>
             <div className="service-content">
               <h2>INNENRÄUME</h2>
               <p>Warum nicht Ihren privaten, geschäftlichen oder gastronomischen Räumlichkeiten ein angenehmes Ambiente verleihen? Gerade für Umgebungen, in denen man sich längere Zeit aufhält, erweist sich eine interessante und ansprechende Optik als besonders wichtig.</p>
               <div className="cta-button-wrapper">
                 <Link to="/projekte" className="cta-button">
-                  <img src="/projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
+                  <img src="./projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
                 </Link>
               </div>
             </div>
@@ -92,7 +92,7 @@ const LeistungenPage: React.FC = () => {
         {/* Full width image 3 */}
         <div className="service-item">
           <div className="service-full-image">
-            <img src="/Leistungen/kingfisherGRAD.png" alt="Workshops Vollbild" />
+            <img src="./Leistungen/kingfisherGRAD.png" alt="Workshops Vollbild" />
           </div>
         </div>
 
@@ -100,14 +100,14 @@ const LeistungenPage: React.FC = () => {
         <div className="service-item">
           <div className="service-split">
             <div className="service-icon">
-              <img src="/objekte.png" alt="Workshops Icon" />
+              <img src="./objekte.png" alt="Workshops Icon" />
             </div>
             <div className="service-content">
               <h2>WORKSHOPS</h2>
               <p>Sie suchen ein kreatives Highlight für Ihr Firmenevent oder eine Veranstaltung Ihrer Jugendeinrichtung? Mit einem Graffitiworkshop bieten wir Ihnen individuelle Möglichkeiten und eine interessante Performance: Teambuilding und Abwechslung vom Arbeitsalltag auf die bunte Art!</p>
               <div className="cta-button-wrapper">
                 <Link to="/projekte" className="cta-button">
-                  <img src="/projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
+                  <img src="./projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
                 </Link>
               </div>
             </div>
@@ -117,7 +117,7 @@ const LeistungenPage: React.FC = () => {
         {/* Full width image 4 */}
         <div className="service-item">
           <div className="service-full-image">
-            <img src="/Leistungen/canvasGRAD.png" alt="Leinwände Vollbild" />
+            <img src="./Leistungen/canvasGRAD.png" alt="Leinwände Vollbild" />
           </div>
         </div>
 
@@ -125,14 +125,14 @@ const LeistungenPage: React.FC = () => {
         <div className="service-item">
           <div className="service-split">
             <div className="service-icon">
-              <img src="/leinwande.png" alt="Leinwände Icon" />
+              <img src="./leinwande.png" alt="Leinwände Icon" />
             </div>
             <div className="service-content">
               <h2>LEINWÄNDE</h2>
               <p>Unsere künstlerische Expertise erstreckt sich auch auf die Gestaltung von Leinwänden. Mit canvasGRAD bieten wir Ihnen einzigartige, handgefertigte Kunstwerke, die Ihren Raum in etwas Besonderes verwandeln.</p>
               <div className="cta-button-wrapper">
                 <Link to="/projekte" className="cta-button">
-                  <img src="/projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
+                  <img src="./projekte button.png" alt="Zu unseren Projekten" style={{ width: 'clamp(200px, 30vw, 320px)' }} />
                 </Link>
               </div>
             </div>

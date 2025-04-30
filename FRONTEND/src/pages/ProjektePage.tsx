@@ -32,32 +32,32 @@ const projects: Project[] = [
     id: 'thw',
     title: 'THW',
     categories: ['fassaden'],
-    image: '/Projekte/thw.jpg',
+    image: './Projekte/thw.jpg',
     description: 'Voller Einsatz beim Technischen Hilfswerk. Das THW steht in Not- und Unglücksfällen der Bevölkerung mit Technik und Know How in Deutschland und weltweit helfend zur Seite.',
     kunde: 'THW Ortsverband Bonn Beuel',
     datum: '2020',
     standort: 'Bonn',
     flache: '90qm',
     images: [
-      '/Projekte/thw-1.jpg',
-      '/Projekte/thw-2.jpg',
-      '/Projekte/thw-3.jpg'
+      './Projekte/thw-1.jpg',
+      './Projekte/thw-2.jpg',
+      './Projekte/thw-3.jpg'
     ]
   },
   {
     id: 'giebelfassade',
     title: 'GIEBELFASSADE',
     categories: ['fassaden'],
-    image: 'public/Slider/cranegirlrGRAD.png',
+    image: './Slider/cranegirlrGRAD.png',
     description: 'Künstlerische Gestaltung einer Giebelfassade',
     kunde: 'Privater Auftraggeber',
     datum: '2023',
     standort: 'Köln',
     flache: '120qm',
     images: [
-      '/Projekte/giebel-1.jpg',
-      '/Projekte/giebel-2.jpg',
-      '/Projekte/giebel-3.jpg'
+      './Projekte/giebel-1.jpg',
+      './Projekte/giebel-2.jpg',
+      './Projekte/giebel-3.jpg'
     ]
   },
   // Add more projects here
